@@ -36,7 +36,7 @@ Aunque el trafico es mayor entre semana, el peor aire se registra el domingo, de
 
 ## Aplicacion en linea
 
-https://huggingface.co/spaces/vcLy/calidad-aire-mexico 
+https://huggingface.co/spaces/vcLyz/calidad-aire-mexico
 
 ---
 
