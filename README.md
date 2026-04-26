@@ -53,17 +53,17 @@ https://huggingface.co/spaces/vcLy2/calidad-aire-mexico
 
 ## Estructura del repositorio
 proyecto/
-├── codigo/
-│ ├── app.py # Aplicacion Dash principal
-│ ├── data_loader.py # Carga y procesamiento de datos
-│ └── assets/
-│ └── style.css # Estilos personalizados
-├── datos_procesados/ # Archivos CSV limpios
-├── docs/
-│ └── narrativa.md # Analisis narrativo completo
-├── Dockerfile # Configuracion para despliegue
-├── requirements.txt # Dependencias de Python
-└── README.md 
+|-- codigo/
+|   |-- app.py
+|   |-- data_loader.py
+|   |-- assets/
+|   |   |-- style.css
+|-- datos_procesados/
+|-- docs/
+|   |-- narrativa.md
+|-- Dockerfile
+|-- requirements.txt
+|-- README.md
 
 ## Instrucciones para ejecutar LOCALMENTE
 
