@@ -22,8 +22,8 @@ def _aplicar_orden_dias(df, col='Dia'):
     return df
 
 
-def cargar_viz1_heatmap():
-    ruta = os.path.join("datos_procesados", "viz1_heatmap_no2.csv")
+def cargar_viz1_barras():
+    ruta = os.path.join("datos_procesados", "viz1_barras_no2.csv")
     df = pd.read_csv(ruta)
     df = _normalizar_columnas(df)
     df = _aplicar_orden_dias(df)
@@ -57,8 +57,8 @@ def cargar_viz3_ranking():
     return df
 
 
-def cargar_heatmap_pivot():
-    df = cargar_viz1_heatmap()
+def cargar_barras_pivot():
+    df = cargar_viz1_barras()
     pivot = df.pivot_table(index='hora', columns='Dia', values='NO2_ppb', observed=True)
     pivot = pivot.reindex(columns=DIAS_ORDEN)
     return pivot

@@ -4,18 +4,18 @@ from dash import dcc, html, Input, Output
 import plotly.graph_objects as go
 import pandas as pd
 from data_loader import (
-    cargar_viz1_heatmap,
+    cargar_viz1_barras,
     cargar_viz2_lineas,
     cargar_viz3_ranking,
-    cargar_heatmap_pivot,
+    cargar_barras_pivot,
 )
 
 # ── Datos ──────────────────────────────────────────────────────────────────
 print("Cargando datos...")
-df_heatmap = cargar_viz1_heatmap()
+df_barras = cargar_viz1_barras()
 df_lineas  = cargar_viz2_lineas()
 df_ranking = cargar_viz3_ranking()
-df_pivot   = cargar_heatmap_pivot()
+df_pivot   = cargar_barras_pivot()
 
 # Precarga PM2.5 para que el selector no se trabe
 print("Precargando PM2.5...")
@@ -268,14 +268,6 @@ app.layout = html.Div(className='pagina', children=[
     ]),
 ])
 
-
-
-max_no2 = df_heatmap['NO2_ppb'].max()
-max_o3 = df_ranking['O3_promedio'].max()
-max_pm25 = df_pm25_precargado['value'].max()
-
-MAX_GLOBAL = max(max_no2, max_o3, max_pm25) * 1.15
-
 # ── Callbacks ──────────────────────────────────────────────────────────────
 
 @app.callback(
@@ -289,7 +281,7 @@ def render_barras_trafico(_):
         18: '🌙 6:00 pm — Tarde-noche',
     }
 
-    df_plot = df_heatmap[df_heatmap['hora'].isin(HORAS_PICO.keys())].copy()
+    df_plot = df_barras[df_barras['hora'].isin(HORAS_PICO.keys())].copy()
     df_plot['Hora_label'] = df_plot['hora'].map(HORAS_PICO)
     df_agr = df_plot.groupby(['Dia', 'Hora_label'], observed=True)['NO2_ppb'].mean().reset_index()
 
@@ -442,7 +434,7 @@ def render_lineas(_):
 def render_ranking(contaminante):
     CONFIG = {
         'NO2': {
-            'archivo':    'viz1_heatmap_no2.csv',
+            'archivo':    'viz1_barras_no2.csv',
             'col_valor':  'NO2_ppb',
             'color_rgba': (44, 110, 158),  # Azul verdoso
             'color_hex':  '#2c6e9e',
@@ -470,7 +462,7 @@ def render_ranking(contaminante):
     cfg = CONFIG[contaminante]
 
     if contaminante == 'NO2':
-        df_rank = df_heatmap.groupby('Dia')['NO2_ppb'].mean().reset_index()
+        df_rank = df_barras.groupby('Dia')['NO2_ppb'].mean().reset_index()
         df_rank.columns = ['Dia', 'valor']
 
     elif contaminante == 'O3':
