@@ -51,20 +51,6 @@ https://huggingface.co/spaces/vcLy2/calidad-aire-mexico
 
 ---
 
-## Estructura del repositorio
-proyecto/
-|-- codigo/
-|   |-- app.py
-|   |-- data_loader.py
-|   |-- assets/
-|   |   |-- style.css
-|-- datos_procesados/
-|-- docs/
-|   |-- narrativa.md
-|-- Dockerfile
-|-- requirements.txt
-|-- README.md
-
 ## Instrucciones para ejecutar LOCALMENTE
 
 ### Requisitos previos
