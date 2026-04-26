@@ -74,31 +74,40 @@ proyecto/
 
 ### Pasos para ejecutar
 1. Clonar el repositorio
-git clone https://github.com/LC-3957/calidad-aire-cdmx-Vz.git
-cd calidad-aire-mexico
+
+- git clone https://github.com/LC-3957/calidad-aire-cdmx-Vz.git
+- cd calidad-aire-mexico
 
 2. Crear y activar entorno virtual
-python -m venv venv
-source venv/bin/activate # En Linux/Mac
-venv\Scripts\activate # En Windows
+
+- python -m venv venv
+- source venv/bin/activate # En Linux/Mac
+- venv\Scripts\activate # En Windows
 
 3. Instalar dependencias
-pip install -r requirements.txt
+
+- pip install -r requirements.txt
 
 4. Modificar app.py al final 
 
-Cambiar esto:
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=7860)
+    Cambiar esto:
 
-Por esto: 
-if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8050)
+    if __name__ == '__main__':
+
+        app.run(host='0.0.0.0', port=7860)
+
+    Por esto: 
+
+    if __name__ == '__main__':
+
+        app.run(host='127.0.0.1', port=8050)
+
 
 5. Ejecutar la aplicacion
-cd codigo
-python app.py
-Abrir en el navegador: `http://127.0.0.1:8050`
+
+- cd codigo
+- python app.py
+- Abrir en el navegador: `http://127.0.0.1:8050`
 
 ---
 
