@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600&display=swap');
 
-/* ── PALETA VERDE ARMÓNICA ── */
+/* ── PALETA DE COLORES VERDE ── */
 :root {
-  /* Fondo principal — verde menta muy clarito */
+  /* Fondo principal  */
   --bg-primary:    #f7fff9;
   --bg-secondary:  #dff0e6;
   --bg-card:       #fefef7;
   --border:        #c8e0d0;
   
-  /* Sombras suaves pero con profundidad */
+  /* Sombras  */
   --shadow-sm:     0 2px 8px rgba(0,0,0,0.04);
   --shadow-md:     0 4px 16px rgba(0,0,0,0.08);
   --shadow-lg:     0 8px 28px rgba(0,0,0,0.12);
@@ -26,7 +26,7 @@
   --green-nature:  #2b6e4a;      /* Verde bosque */
   --green-soft:    #5a9e6e;
   
-  /* Textos en armonía */
+  /* Textos*/
   --text-primary:  #0d1913;      /* Verde muy oscuro */
   --text-secondary: #101614;     /* Gris verdoso */
   --text-muted:    #263f31;      /* Gris verdoso más claro */
@@ -66,9 +66,7 @@ body {
   padding: 0 28px 80px;
 }
 
-/* ============================================================
-   HERO — entrada armónica
-   ============================================================ */
+/*  HERO — entrada armónica  */
 .hero {
   padding: 52px 0 44px;
   border-bottom: 1px solid var(--border);
@@ -145,9 +143,7 @@ body {
   font-weight: 600;
 }
 
-/* ============================================================
-   INTRO NARRATIVA — con tarjeta verde suave
-   ============================================================ */
+/*  INTRO NARRATIVA — con tarjeta verde suave  */
 .intro-narrativa {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -205,9 +201,7 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* ============================================================
-   SECCIÓN DE VISUALIZACIONES
-   ============================================================ */
+/*   SECCIÓN DE VISUALIZACIONES  */
 .seccion-viz {
   margin-bottom: 80px;
 }
@@ -271,9 +265,7 @@ body {
   font-weight: 600;
 }
 
-/* ============================================================
-   LEYENDA PERSONALIZADA
-   ============================================================ */
+/* LEYENDA PERSONALIZADA  */
 .leyenda {
   display: flex;
   gap: 28px;
@@ -305,9 +297,7 @@ body {
   border-radius: 3px;
 }
 
-/* ============================================================
-   SELECTOR DE CONTAMINANTE
-   ============================================================ */
+/*  SELECTOR DE CONTAMINANTE  */
 .selector-contenedor {
   margin-bottom: 28px;
   padding: 22px 28px;
@@ -345,9 +335,7 @@ body {
   height: 16px;
 }
 
-/* ============================================================
-   CONCLUSIÓN — con acento verde
-   ============================================================ */
+/* CONCLUSIÓN — con acento verde  */
 .conclusion {
   background: linear-gradient(145deg, var(--bg-card), #fcfef9);
   border: 1px solid var(--border);
@@ -456,9 +444,7 @@ body {
   font-weight: 600;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* FOOTER  */
 .footer {
   margin-top: 56px;
   padding-top: 32px;
@@ -477,9 +463,7 @@ body {
   text-transform: uppercase;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* RESPONSIVE  */
 @media (max-width: 640px) {
   .pagina {
     padding: 0 16px 48px;
@@ -521,9 +505,7 @@ body {
   }
 }
 
-/* ============================================================
-   SCROLLBAR VERDE
-   ============================================================ */
+/* SCROLLBAR VERDE */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -543,9 +525,7 @@ body {
   background: var(--green-nature);
 }
 
-/* ============================================================
-   ENLACES Y DETALLES
-   ============================================================ */
+/* ENLACES Y DETALLES */
 a {
   color: var(--green-nature);
   text-decoration: none;

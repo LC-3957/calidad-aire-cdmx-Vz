@@ -31,19 +31,19 @@ print("Datos listos.")
 RUTA = os.path.join(os.path.dirname(__file__), "..", "datos_procesados")
 DIAS_ORDEN = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
 
-# ── Paleta VERDE ARMÓNICA (actualizada) ────────────────────────────────────
+# ── Paleta VERDE ────────────────────────────────────
 # Colores principales
-C_NO2   = '#2c6e9e'      # Azul verdoso (tráfico)
+C_NO2   = '#2c6e9e'      # Azul verdoso (NO2)
 C_O3    = '#d4a017'      # Mostaza/ámbar (Ozono)
 C_PM25  = '#c05a3b'      # Terracota (PM2.5)
 C_ALERT = '#c05a3b'
 
-# Colores de fondo para gráficas (claros, armonía verde)
-C_BG    = '#fefef7'      # Fondo de la gráfica (blanco cálido)
-C_PAPER = '#fefef7'      # Fondo del papel (blanco cálido)
-C_GRID  = '#c8e0d0'      # Líneas de cuadrícula (verde sage)
-C_TEXT  = '#1a2e24'      # Texto principal (verde muy oscuro)
-C_MUTED = '#4a6b5d'      # Texto secundario (gris verdoso)
+# Colores de fondo para gráficas 
+C_BG    = '#fefef7'      # Fondo de la gráfica 
+C_PAPER = '#fefef7'      # Fondo del papel 
+C_GRID  = '#c8e0d0'      # Líneas de cuadrícula 
+C_TEXT  = '#1a2e24'      # Texto principal 
+C_MUTED = '#4a6b5d'      # Texto secundario 
 FONT_BODY = 'Source Sans 3, sans-serif'
 
 # Configuración base de Plotly
@@ -129,7 +129,7 @@ app.layout = html.Div(className='pagina', children=[
         ]),
     ]),
 
-    # VIZ 1 — BARRAS TRÁFICO
+    # VIZ 1 — BARRAS TRAFICO
     html.Section(className='seccion-viz', children=[
         html.P("Visualización 01 / 03", className='seccion-numero'),
         html.H2("¿Cuándo hay más autos en la ciudad?", className='seccion-titulo'),
@@ -151,7 +151,7 @@ app.layout = html.Div(className='pagina', children=[
         ]),
     ]),
 
-    # VIZ 2 — LÍNEAS
+    # VIZ 2 — LINEAS
     html.Section(className='seccion-viz', children=[
         html.P("Visualización 02 / 03", className='seccion-numero'),
         html.H2("Si hay más NO₂ entre semana, ¿cuándo sube el Ozono?",
@@ -227,7 +227,7 @@ app.layout = html.Div(className='pagina', children=[
         ]),
     ]),
 
-    # CONCLUSIÓN
+    # CONCLUSION
     html.Section(className='conclusion', children=[
         html.H2("¿Qué hacer con esta información?", className='conclusion-titulo'),
         html.Div(className='conclusion-grid', children=[
