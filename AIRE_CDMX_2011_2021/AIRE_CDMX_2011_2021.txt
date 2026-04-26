@@ -1,0 +1,34 @@
+Compendio de datos de meteorología y contaminantes 2011-2021 de la CDMX
+Coniene los datos disponibles en la sección de datos de la pagina http://www.aire.cdmx.gob.mx/
+
+Contaminantes http://www.aire.cdmx.gob.mx/default.php?opc=%27aKBhnmI=%27&opcion=Zg==
+Meteorología http://www.aire.cdmx.gob.mx/default.php?opc=%27aKBhnmI=%27&opcion=Zw==
+
+Además de las medias para los siguentes periodos de tiempo:
+
+mensual
+semanal
+horarios: medias6h(promedio cada 6 horas)
+	  medias6hMes(Promedio mensual para cada franja de 6 horas)
+	  medias6hSemanal(Promedio semanal para cada franja de 6 horas)
+
+** se procesaron los datos disponibles, se debe considerar que algunas estaciones de monitoreo tuvieron intermitencias en la captura de datos durante el periodo 2010-2021
+Los archivos de la base de datos se encuentran en formato .csv
+
+Los directorios de la base de datos cuentan con la siguiente estructura
+
+/catalogos (datos de las estaciones de monitoreo,identificadores de los parametros medidos y unidades de las mediciones)
+/contaminantes (datos sin procesar por año)
+	/medias
+		/horarios [medias6h(promedio cada 6 horas)]
+			/mes [medias6hMes(Promedio mensual para cada franja de 6 horas)]
+			/semana[medias6hSemanal(Promedio semanal para cada franja de 6 horas)]
+		/mes [mediasMes(promedios mensuales)]
+		/semana [mediasSemana(promedios semanales)]
+/meteorologico (datos sin procesar por año)
+	/medias
+		/horarios [medias6h(promedio cada 6 horas)]
+			/mes [medias6hMes(Promedio mensual para cada franja de 6 horas)]
+			/semana[medias6hSemanal(Promedio semanal para cada franja de 6 horas)]
+		/mes [mediasMes(promedios mensuales)]
+		/semana [mediasSemana(promedios semanales)]

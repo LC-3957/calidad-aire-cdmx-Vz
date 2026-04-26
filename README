@@ -1,0 +1,33 @@
+# ¿Respiramos peor los lunes?
+
+Aplicación interactiva que analiza patrones de contaminación del aire en la CDMX (2011–2021) usando datos de SEDEMA.
+
+## Hallazgo principal
+
+Aunque el tráfico es mayor entre semana, el **peor aire se registra el domingo**, debido a la formación de ozono a partir de emisiones acumuladas.
+
+## Qué puedes explorar
+
+* 🚗 NO₂ → tráfico en tiempo real
+* ☀️ Ozono → daño retrasado
+* 🫁 PM2.5 → partículas finas
+
+## Demo
+
+https://huggingface.co/spaces/vcLyz/calidad-aire-mexico 
+
+## Datos
+
+SEDEMA · Sistema de Monitoreo Atmosférico (SIMAT)
+2011–2021 · ~3.5 millones de registros
+
+## Narrativa completa
+
+Consulta el análisis detallado en `/docs/narrativa.md`
+
+## Tecnologías
+
+* Python
+* Dash
+* Plotly
+* Docker
